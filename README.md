@@ -39,4 +39,3 @@ We **never** sell, trade, or transmit your data to third parties. Because we do 
 
 This policy is designed to comply with the Chrome Web Store User Data Policy, including requirements for **Limited Use** and **Scraping Disclosure**.
 
-Would you like me to help you set up a simple GitHub Pages site to host this policy for free?
