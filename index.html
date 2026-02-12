@@ -17,6 +17,7 @@
         h1 { color: #6B2FD6; border-bottom: 2px solid #e8e0f3; padding-bottom: 10px; }
         h2 { color: #1a1a2e; margin-top: 30px; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -25,31 +26,36 @@
     <p><strong>Last Updated: February 12, 2026</strong></p>
 
     <h2>1. Overview</h2>
-    <p>Candlewax ("the extension") is a productivity utility designed to help users download their own call transcripts and summaries from a call recording platform. We follow a "Privacy by Design" approach, ensuring that your data remains under your local control.</p>
+    <p>Candlewax ("the extension") is a productivity utility designed to help users archive their professional conversations by locally extracting transcripts and summaries from the Gong platform. This policy outlines our commitment to data minimization and user privacy.</p>
 
-    <h2>2. Information Collection and Use</h2>
-    <p>The extension extracts call transcripts, participant names, dates, and summaries directly from the <code>app.gong.io</code> pages you visit. This data is used for the <strong>sole purpose</strong> of generating local files (TXT and CSV) for your personal use.</p>
-
-    <h2>3. Local Processing</h2>
+    <h2>2. Information Collection and Disclosure</h2>
+    <p>To fulfill its single purpose, the extension processes the following categories of user data:</p>
     <ul>
-        <li><strong>No Remote Transmission:</strong> All data extraction and file formatting occur locally within your browser.</li>
-        <li><strong>No Data Storage:</strong> We do not store your transcripts on any external database or server.</li>
-        <li><strong>Zero Tracking:</strong> We do not use cookies or analytics to monitor your activity.</li>
+        <li><strong>Personal Communications:</strong> The extension extracts call transcripts, participant names, and conversation metadata from your Gong account.</li>
+        <li><strong>Website Content:</strong> The extension parses text, summaries, and structural UI elements directly from <code>app.gong.io</code> to generate exportable files.</li>
     </ul>
 
-    <h2>4. Permissions Disclosure</h2>
-    <p>To function properly, Candlewax requires the following permissions:</p>
+    <h2>3. Local Processing & Storage</h2>
+    <p>Your privacy is protected by the technical architecture of Candlewax:</p>
     <ul>
-        <li><code>scripting</code>: To read transcript text from the Gong interface.</li>
-        <li><code>downloads</code>: To save generated files to your device.</li>
-        <li><code>storage</code>: To maintain session status during bulk operations.</li>
+        <li><strong>Zero Data Transmission:</strong> All data extraction and file formatting occur <strong>locally</strong> within your browser. No transcripts or personal information are ever transmitted to external servers or third parties.</li>
+        <li><strong>No Persistent Storage:</strong> We do not maintain a database of your conversations. Data is cleared from the extension's temporary memory once the local file generation is complete.</li>
+        <li><strong>No Analytics:</strong> We do not track your usage, clicks, or web history.</li>
     </ul>
 
-    <h2>5. Third-Party Sharing</h2>
-    <p>We do not sell, trade, or transmit your data to third parties. Because data is not collected on our servers, it cannot be shared with advertisers or data brokers.</p>
+    <h2>4. Permissions Justification</h2>
+    <p>The extension requires the following permissions to function:</p>
+    <ul>
+        <li><code>scripting</code> & <code>host_permissions</code>: To parse transcript data from the Gong interface.</li>
+        <li><code>downloads</code>: To save the generated TXT and CSV files to your device.</li>
+        <li><code>alarms</code> & <code>tabs</code>: To manage the background processes and tabs required for bulk downloads.</li>
+    </ul>
+
+    <h2>5. Compliance and Limited Use</h2>
+    <p>This extension complies with the Chrome Web Store User Data Policy, including the <strong>Limited Use</strong> requirements. We do not sell, trade, or rent user data to any third party.</p>
 
     <div class="footer">
-        <p>This policy is compliant with the Chrome Web Store User Data Policy.</p>
+        <p>For questions regarding this policy, please contact the developer through the Chrome Web Store support link.</p>
     </div>
 
 </body>
