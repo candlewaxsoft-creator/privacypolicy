@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gong Downloader</h1>
+
+    <div id="not-gong" class="warning hidden">
+      Navigate to a Gong search results page first.
+    </div>
+
+    <div id="idle" class="section">
+      <p class="info">Download all transcripts and summaries from the current Gong search results.</p>
+
+      <label class="field-label" for="folder-name">Folder name</label>
+      <input type="text" id="folder-name" class="input" placeholder="YYYY-MM-DD">
+
+      <p class="hint">Files saved to: Downloads/Gong Transcripts/<span id="folder-preview"></span>/</p>
+
+      <button id="start-btn" class="btn btn-primary">Start Download</button>
+    </div>
+
+    <div id="running" class="section hidden">
+      <div class="progress-bar-container">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <p id="progress-text" class="status-text">Starting...</p>
+      <p id="page-text" class="detail-text"></p>
+      <p id="count-text" class="detail-text"></p>
+      <p id="error-text" class="error-text hidden"></p>
+
+      <div class="btn-group">
+        <button id="pause-btn" class="btn btn-secondary">Pause</button>
+        <button id="resume-btn" class="btn btn-secondary hidden">Resume</button>
+        <button id="stop-btn" class="btn btn-danger">Stop</button>
+      </div>
+    </div>
+
+    <div id="complete" class="section hidden">
+      <p class="success-text">Download complete!</p>
+      <p id="final-count" class="detail-text"></p>
+      <p id="final-errors" class="error-text hidden"></p>
+
+      <button id="open-folder-btn" class="btn btn-secondary">Open Downloads</button>
+      <button id="restart-btn" class="btn btn-primary">New Download</button>
+    </div>
+
+    <div id="error-log" class="error-log hidden">
+      <h3>Recent Errors</h3>
+      <ul id="error-list"></ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
